@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--Подключаем шрифт-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Подключаем иконки-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!--Подключаем файл со стилями-->
+    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="js" href="1.js" />-->
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header_logo logo" href="#">Portfolio</a>
+    </header>
+
+    <div class="hero">
+      <div class="container hero_container">
+        <!--<div id="content"><div>-->
+        <div class="hero_about">
+          <div class="hero_box">
+            <img class="hero_box-img" src="1.PNG" alt="тебе не всё равно?" />
+          </div>
+          <h1 id="content" class="hero_title"></h1>
+          <h2 class="hero_subtitle">Иванов Алексей</h2>
+          <p class="hero_description">
+            Привет, я занимаюсь версткой адаптивных сайтов по макету. Пишите для сотрудничества.
+          </p>
+          <div class="hero_links">
+            <a class="hero_link" href="https://wa.me/+79778368506">
+              <i class="bx bxl-whatsapp"></i>
+            </a>
+            <a class="hero_link" href="tg://resolve?domain=<@Alexey_Valentinovich>">
+              <i class="bx bxl-telegram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let text = 'Web developer.';
+      let content = document.querySelector('#content');
+
+      for (let i in [...text]) {
+        let letter = document.createElement('span');
+        letter.textContent = [...text][i];
+        if (letter.textContent.match(/\s/)) {
+          letter.style.margin = 'auto 3px';
+        }
+        letter.style.animationDelay = i / 10 + 's';
+        content.appendChild(letter);
+      }
+    </script>
+    <!--частицы-->
+    <div class="space">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </body>
+  <footer>
+    <div class="footer">
+      <ul>
+        <li class="1">чем сейчас занимаешься ты?</li>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>scss</li>
+        <li>msql</li>
+      </ul>
+    </div>
+  </footer>
+</html>
